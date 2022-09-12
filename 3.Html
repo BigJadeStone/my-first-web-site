@@ -14,26 +14,57 @@
   gtag('config', 'G-TEHH77891P');
 </script>
 
+<link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
 <h1><a href="index.html">WEB</a></h1>
-<ol>
-  <li><a href="1.html">HTML</a></li>
-  <li><a href="2.html">CSS</a></li>
-  <li><a href="3.html">JavaScript</a></li>
-</ol>
-<h2>JavaScript</h2>
-<p>
-  JavaScript (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use JavaScript on the client side for webpage behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
 
-  JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+<input type="button" value="Night" onclick="
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+">
+<input type="button" value="Day" onclick="
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+">
 
-  The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+<input id="night_day" type="button" value="Night" onclick="
+if(document.querySelector('#night_day').value === 'Night'){
+document.querySelector('body').style.backgroundColor='black';
+document.querySelector('body').style.color='white';
+document.querySelector('#night_day').value = 'Day';
+} else {
+document.querySelector('body').style.backgroundColor='white';
+document.querySelector('body').style.color='black';
+document.querySelector('#night_day').value = 'Night';
+}
+">
 
-  JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+<div id="grid">
+  <ol>
+    <li><a href="1.html">HTML</a></li>
+    <li><a href="2.html">CSS</a></li>
+    <li><a href="3.html">JavaScript</a></li>
+  </ol>
+  <div id="article">
+    <h2>JavaScript</h2>
+      <p>
+        JavaScript (/ˈdʒɑːvəskrɪpt/),[10] often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.[11] As of 2022, 98% of websites use JavaScript on the client side for webpage behavior,[12] often incorporating third-party libraries.[13] All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.
 
-  Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
-</p>
+        JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard.[14] It has dynamic typing, prototype-based object-orientation, and first-class functions. It is multi-paradigm, supporting event-driven, functional, and imperative programming styles. It has application programming interfaces (APIs) for working with text, dates, regular expressions, standard data structures, and the Document Object Model (DOM).
+
+        The ECMAScript standard does not include any input/output (I/O), such as networking, storage, or graphics facilities. In practice, the web browser or other runtime system provides JavaScript APIs for I/O.
+
+        JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.
+
+        Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.
+      </p>
+  </div>
+</div>
+
+
 <p>
   <div id="disqus_thread"></div>
   <script>
@@ -69,6 +100,19 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+
+<input type="button" value="Night" onclick="
+var target = document.querySelector('body');
+if(this.value === 'Night'){
+target.style.backgroundColor='black';
+target.style.color='white';
+this.value = 'Day';
+} else {
+target.style.backgroundColor='white';
+target.style.color='black';
+this.value = 'Night';
+}
+">
 
 </body>
 </html>
